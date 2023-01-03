@@ -4,7 +4,7 @@ ESX = exports["es_extended"]:getSharedObject()
 
 TriggerEvent('esx_society:registerSociety', 'winemaker', 'Winemaker', 'society_winemaker', 'society_winemaker', 'society_winemaker', {type = 'private'})
 
-local webhooks = "https://discord.com/api/webhooks/1059848421030244352/0lZb-jCy9KtttLGYG5rEVx7mFJNsfmI39HohrYyGUIHu1DJm9yffYLy34vQs2QmalqR6"
+local webhooks = ""
 
 Items = {
     Config.cervenehrozno,
@@ -130,7 +130,7 @@ AddEventHandler('predajs:cervene', function()
 					{
 						["color"] = "9109504",
 						["title"] = "Predaj červeného vína",
-						["description"] = "**Hráč:** " ..GetPlayerName(source).. "\n **ID:** "..xPlayer.source.."\n **Steam ID:** "..GetPlayerIdentifier(source).." \n **The company was given:** " ..money.. "$",
+						["description"] = "**Player:** " ..GetPlayerName(source).. "\n **ID:** "..xPlayer.source.."\n **Steam ID:** "..GetPlayerIdentifier(source).." \n **The company was given:** " ..money.. "$",
 						["footer"] = {
 						["text"] = os.date('%H:%M:%S - %d. %m. %Y', os.time()),
 						["icon_url"] = "https://media.discordapp.net/attachments/1059616858606669955/1059818533791486012/T3.png",
@@ -167,7 +167,7 @@ AddEventHandler('predajs:biele', function()
 					{
 						["color"] = "9109504",
 						["title"] = "Predaj bieleho vína",
-						["description"] = "**Hráč:** " ..GetPlayerName(source).. "\n **ID:** "..xPlayer.source.."\n **Steam ID:** "..GetPlayerIdentifier(source).." \n **The company was given:** " ..money.. "$",
+						["description"] = "**Player:** " ..GetPlayerName(source).. "\n **ID:** "..xPlayer.source.."\n **Steam ID:** "..GetPlayerIdentifier(source).." \n **The company was given:** " ..money.. "$",
 						["footer"] = {
 						["text"] = os.date('%H:%M:%S - %d. %m. %Y', os.time()),
 						["icon_url"] = "https://media.discordapp.net/attachments/1059616858606669955/1059818533791486012/T3.png",
@@ -204,7 +204,7 @@ AddEventHandler('predajs:ruzove', function()
 					{
 						["color"] = "9109504",
 						["title"] = "Predaj ružového vína",
-						["description"] = "**Hráč:** " ..GetPlayerName(source).. "\n **ID:** "..xPlayer.source.."\n **Steam ID:** "..GetPlayerIdentifier(source).." \n **The company was given:** " ..money.. "$",
+						["description"] = "**Player:** " ..GetPlayerName(source).. "\n **ID:** "..xPlayer.source.."\n **Steam ID:** "..GetPlayerIdentifier(source).." \n **The company was given:** " ..money.. "$",
 						["footer"] = {
 						["text"] = os.date('%H:%M:%S - %d. %m. %Y', os.time()),
 						["icon_url"] = "https://media.discordapp.net/attachments/1059616858606669955/1059818533791486012/T3.png",
