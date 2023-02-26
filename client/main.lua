@@ -451,6 +451,7 @@ CreateThread(function()
                 icon = 'fa-sharp fa-solid fa-wine-bottle',
                 label = TranslateCap('garage'),
                 distance = 2,
+		groups = Config.Job,
             }
         }
         )    
