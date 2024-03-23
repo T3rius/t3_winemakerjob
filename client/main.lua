@@ -470,10 +470,14 @@ RegisterNetEvent('garage:menu', function()
             {
                 title = 'Pick-UP',
                 event = 'garage:pickup'
+            },
+	    {
+                title = 'Return car',
+                event = 'garage:returnVehicle'
             }
         },
     })
-    lib.showContext('Configgarage')
+    	lib.showContext('Configgarage')
 end)
 
 RegisterNetEvent('garage:van')
@@ -486,6 +490,18 @@ RegisterNetEvent('garage:pickup')
 AddEventHandler('garage:pickup',function()
     ESX.Game.SpawnVehicle('bison3', vec3(-1919.8474, 2052.8503, 140.7303), 257.0, function(vehicle)
     end)
+end)
+
+RegisterNetEvent('garage:returnVehicle')
+AddEventHandler('garage:returnVehicle', function()
+    local playerPed = PlayerPedId()
+    local vehicle = GetVehiclePedIsIn(playerPed, false)
+    if DoesEntityExist(vehicle) then
+        ESX.Game.DeleteVehicle(vehicle)
+        ESX.ShowNotification("Successfully returned car.")
+    else
+        ESX.ShowNotification("You're not in a vehicle.")
+    end
 end)
 
 function blips()
